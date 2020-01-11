@@ -5,6 +5,11 @@
 * Forget about problem -> ~~Application doe not work on my machine~~, works same on all machines
 
 [Official documentation](https://docs.docker.com/engine/docker-overview/)
+
+
+**Additional motivation:** docker based on virtualization. 
+It is fundamental to understand `networks`, `volumes`, `port mapping`, etc...
+Understanding will make further work with orchestration tools( `k8s`, `hashiCorp nomad` ) easier, once you got these concept s. 
 ## Image vs Container
 [**def1**] A Docker image is a file, comprised of multiple layers, used to execute code in a Docker container.
 
@@ -21,7 +26,7 @@ RUN ["chmod", "+x", "/docker-entrypoint.sh"]
 ENTRYPOINT ["/docker-entrypoint.sh"]
 ``` 
 
-3 logical groups of instructions: Base-image, instructions and run 
+3 logical groups of instructions: `base-image`, `instructions` and `run` 
 ```
 FROM        base-image
 ...         custom commands (instructions)

@@ -1,0 +1,20 @@
+version: '3'
+services:
+  my-application1:                # service name, should be unique in docker-compose.yml file
+    build: .                      # where Dockerfile locates
+    image: my-first-app:2.0       # image name for build
+    environment:                  # set of environmental variables
+      SLEEP_TIME: 5
+      CUSTOM_VARIABLE: "Yohohoho and bottle of Rom"
+
+  my-application2:
+    image: my-first-app:2.0       # docker client will search for this image locally (at first)
+    environment:
+      SLEEP_TIME: 100
+
+  my-application3:
+    image: my-first-app:2.0
+    environment:
+      SLEEP_TIME: 17
+volumes:
+  logvolume01: {}

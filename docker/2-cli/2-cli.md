@@ -18,11 +18,11 @@ dockerd
 In our daily work, we are going to use mostly `docker` and `docker-compose` CLIs.
 
 ## Important note
-Some of `CLI` commands are PATH dependent.
+`!NB` Some of `CLI` commands are PATH dependent.
 
 For instance: If you are building image with command `docker build .`, 
 docker-client will look at current directory(where command was executed) in attempt to find `./Dockerfile` and use this file to build image.
-If file not exist, than you will get log:
+If file does not exist, than you will get such a log:
 ```bash
 niks-MBP:docker-start nik$ pwd && ls
 /Users/nik/src/github.com/zhenik/docker-start

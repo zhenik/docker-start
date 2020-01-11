@@ -40,7 +40,9 @@ ENTRYPOINT  how to run application
 
 
 ## Image syntax
-Docker images has own syntax how to define instructions. [Docker doc](https://docs.docker.com/)
+Docker images has own syntax how to define instructions.  
+[Docker doc](https://docs.docker.com/)  
+[Other documentation about instructions](https://github.com/wsargent/docker-cheat-sheet#instructions)
 ```dockerfile
 FROM ...
 MAINTAINER ...

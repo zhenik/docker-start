@@ -31,6 +31,16 @@ docker-machine
 Simplified representation
 ![img](./docker-simplified.png)
 
+## Notes
+Docker has directory for client-config. Usual location is `~/.docker`.
+
+```bash
+niks-MBP:.docker nik$ pwd
+/Users/nik/.docker
+niks-MBP:.docker nik$ ls
+config.json     daemon.json     machine
+```
+
 ## Problems
 ### 1 Docker daemon is not running.  
 Log:

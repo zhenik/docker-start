@@ -57,7 +57,7 @@ ENTRYPOINT ...
 ## CLI
 ```bash
 # build an image
-docker build -t zhenik/docker-test . 
+docker build -t docker-test . 
 
 # check local images
 docker images

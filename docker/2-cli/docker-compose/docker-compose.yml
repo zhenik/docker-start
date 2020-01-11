@@ -16,5 +16,3 @@ services:
     image: my-first-app:2.0
     environment:
       SLEEP_TIME: 17
-volumes:
-  logvolume01: {}

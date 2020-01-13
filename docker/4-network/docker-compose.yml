@@ -1,0 +1,16 @@
+version: '3'
+services: # port mapping examples
+  nginx1:
+    image: nginx
+    ports:
+    - 8084:80
+
+  nginx2:
+    image: nginx
+    ports:
+      - 18084:80
+
+  nginx3:
+    image: nginx
+    ports:
+      - 6666:80

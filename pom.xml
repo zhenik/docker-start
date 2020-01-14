@@ -6,11 +6,50 @@
 
   <groupId>com.zhenik</groupId>
   <artifactId>minio-ingestion</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+
+  <modules>
+    <module>file-in-service</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <slf4j.logger.version>1.7.25</slf4j.logger.version>
+    <armeria.version>0.97.0</armeria.version>
+    <typesafe-config.version>1.4.0</typesafe-config.version>
+    <slf4j.logger.version>1.7.25</slf4j.logger.version>
+    <shade.plugin.version>3.2.1</shade.plugin.version>
+  </properties>
 
   <dependencyManagement>
     <dependencies>
-
+      <!--http server-->
+      <dependency>
+        <groupId>com.linecorp.armeria</groupId>
+        <artifactId>armeria</artifactId>
+        <version>${armeria.version}</version>
+      </dependency>
+      <!--config-->
+      <dependency>
+        <groupId>com.typesafe</groupId>
+        <artifactId>config</artifactId>
+        <version>${typesafe-config.version}</version>
+      </dependency>
+      <!--logging-->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>${slf4j.logger.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.logger.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 </project>

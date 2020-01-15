@@ -58,6 +58,16 @@ services:
     depends_on:
       - zookeeper
 
+  # source https://github.com/jitucloud/esdc-2019/blob/41b87cdd108e6cfbd3720f1a68f195a0b091cbf5/docker/latest/5.docker-compose-kafkacat.yml
+  event-consumer:
+    image: confluentinc/cp-kafkacat:5.3.1
+    tty: true
+    stdin_open: true
+    entrypoint: "kafkacat -b kafka:9092 -C -K: \
+                          -f '\nKey (%K bytes): %k\t\nValue (%S bytes): %s\n\Partition: %p\tOffset: %o\n--\n' \
+                          -t minio-events-v1"
+
+
   # source https://github.com/confluentinc/examples/blob/5.3.1-post/microservices-orders/docker-compose.yml#L183-L215
   kafka-setup:
     image: confluentinc/cp-kafka:5.3.1

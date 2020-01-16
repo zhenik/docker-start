@@ -78,7 +78,7 @@ docker run --tty \
 Consuming messages from a topic
 ```bash
 docker run --tty \
-           --network docker-start_default \
+           --network kafka-minio_default \
            confluentinc/cp-kafkacat \
            kafkacat -b kafka:9092 -C -K: \
                     -f '\nKey (%K bytes): %k\t\nValue (%S bytes): %s\n\Partition: %p\tOffset: %o\n--\n' \

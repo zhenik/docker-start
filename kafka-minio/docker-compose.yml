@@ -39,6 +39,7 @@ services:
       mc event list dc-minio/images;"
     depends_on:
       - minio-server
+      - kafka-setup
 
   zookeeper:
     image: confluentinc/cp-zookeeper:5.3.1
@@ -63,10 +64,13 @@ services:
     image: confluentinc/cp-kafkacat:5.3.1
     tty: true
     stdin_open: true
+    environment:
+      SLEEP_TIME: 40
     entrypoint: "kafkacat -b kafka:9092 -C -K: \
                           -f '\nKey (%K bytes): %k\t\nValue (%S bytes): %s\n\Partition: %p\tOffset: %o\n--\n' \
                           -t minio-events-v1"
-
+    depends_on:
+      - kafka
 
   # source https://github.com/confluentinc/examples/blob/5.3.1-post/microservices-orders/docker-compose.yml#L183-L215
   kafka-setup:

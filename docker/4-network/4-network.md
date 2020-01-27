@@ -68,6 +68,5 @@ docker exec <container_2_id> ping <container_1_IPAddress>
 [Official documentation](https://docs.docker.com/v17.09/engine/userguide/networking/#the-default-bridge-network)
 
 todo:
-- port mapping
 - docker engine has dns
 - docker-compose creates default network, all services are in that network (by default) 

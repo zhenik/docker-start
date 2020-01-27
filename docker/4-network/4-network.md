@@ -3,7 +3,15 @@
 * [Basic docker networking](https://runnable.com/docker/basic-docker-networking)
 * [Docker network: official documentation](https://docs.docker.com/network/)
 ## General info
-Containers, by default, run in `default bridge network` of docker-host. 
+Docker networks:
+* none
+* bridge
+* host
+* defined by user (overlay networks)*
+
+Containers, by default, run in `default bridge network` of docker-host.
+
+[Docker networking explanation. Video](https://www.youtube.com/watch?v=Xxhhdo2e-DA&feature=youtu.be) 
 ### 0-Build image
 ```bash
 docker build -t network-application .
